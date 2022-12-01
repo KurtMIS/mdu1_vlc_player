@@ -1005,23 +1005,23 @@ void VlcPlayerApiSetup(id<FlutterBinaryMessenger> binaryMessenger, id<VlcPlayerA
       [channel setMessageHandler:nil];
     }
   }
-  {
-    FlutterBasicMessageChannel *channel =
-      [FlutterBasicMessageChannel
-        messageChannelWithName:@"dev.flutter.pigeon.VlcPlayerApi.getVideoResolutions"
-        binaryMessenger:binaryMessenger];
-    if (api) {
-      [channel setMessageHandler:^(id _Nullable message, FlutterReply callback) {
-        ViewMessage *input = [ViewMessage fromMap:message];
-        FlutterError *error;
-        SpuTracksMessage *output = [api getSpuTracks:input error:&error];
-        callback(wrapResult([output toMap], error));
-      }];
-    }
-    else {
-      [channel setMessageHandler:nil];
-    }
-  }
+  // {
+  //   FlutterBasicMessageChannel *channel =
+  //     [FlutterBasicMessageChannel
+  //       messageChannelWithName:@"dev.flutter.pigeon.VlcPlayerApi.getVideoResolutions"
+  //       binaryMessenger:binaryMessenger];
+  //   if (api) {
+  //     [channel setMessageHandler:^(id _Nullable message, FlutterReply callback) {
+  //       ViewMessage *input = [ViewMessage fromMap:message];
+  //       FlutterError *error;
+  //       SpuTracksMessage *output = [api getSpuTracks:input error:&error];
+  //       callback(wrapResult([output toMap], error));
+  //     }];
+  //   }
+  //   else {
+  //     [channel setMessageHandler:nil];
+  //   }
+  // }
   {
     FlutterBasicMessageChannel *channel =
       [FlutterBasicMessageChannel

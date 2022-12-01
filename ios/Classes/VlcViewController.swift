@@ -146,10 +146,10 @@ public class VLCViewController: NSObject, FlutterPlatformView {
         self.vlcMediaPlayer.perform(Selector("setTextRendererFontSize:"), with: 25)
     }
     
-    public func getVideoResolutions() -> [Int:String]? {
+    // public func getVideoResolutions() -> [Int:String]? {
         
         // return self.vlcMediaPlayer.video()
-    }
+    // }
     
     public func getSpuTrack() -> NSNumber? {
         

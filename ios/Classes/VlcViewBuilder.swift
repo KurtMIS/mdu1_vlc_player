@@ -228,13 +228,13 @@ public class VLCViewBuilder: NSObject, VlcPlayerApi{
         return message
     }
 
-    public func getVideoResolutions(_ input: ViewMessage, error: AutoreleasingUnsafeMutablePointer<FlutterError?>) -> SpuTracksMessage? {
+    // public func getVideoResolutions(_ input: ViewMessage, error: AutoreleasingUnsafeMutablePointer<FlutterError?>) -> SpuTracksMessage? {
         
-        let player = getPlayer(viewId: input.viewId)
-        let message: SpuTracksMessage = SpuTracksMessage()
-        message.subtitles = player?.getVideoResolutions()
-        return message
-    }
+    //     let player = getPlayer(viewId: input.viewId)
+    //     let message: SpuTracksMessage = SpuTracksMessage()
+    //     message.subtitles = player?.getVideoResolutions()
+    //     return message
+    // }
     
     public func setSpuTrack(_ input: SpuTrackMessage, error: AutoreleasingUnsafeMutablePointer<FlutterError?>) {
         
