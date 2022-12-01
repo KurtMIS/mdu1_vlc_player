@@ -44,7 +44,7 @@ public class VLCViewController: NSObject, FlutterPlatformView {
         self.vlcMediaPlayer.delegate = self.mediaEventChannelHandler
      
         super.init()
-        self.setFontSize()
+        setFontSize()
     }
     
     public func play() {
